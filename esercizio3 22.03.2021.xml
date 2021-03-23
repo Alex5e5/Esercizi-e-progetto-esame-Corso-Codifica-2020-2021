@@ -1,0 +1,16 @@
+<? xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+
+<TEI type="doc">
+    <test>
+
+    </test>
+    <htmlFragment>
+        <![CDATA[
+            <h1></h1>
+            <div><span></span></div>
+            
+        ]]>
+    </htmlFragment>
+
+</TEI>
