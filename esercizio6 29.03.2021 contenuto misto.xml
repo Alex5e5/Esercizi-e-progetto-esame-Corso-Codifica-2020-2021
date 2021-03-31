@@ -1,0 +1,26 @@
+<!-- TESTO DELL'ESERCIZIO:
+
+Root: TEI
+
+Figli: 
+      - header (obbligatorio una volta sola)
+      - facsimile (opzionale una volta sola)
+      - testo (obbligatorio una o più volte)
+      * testo è un mixed content con possibile elemento <seg>
+
+Attributi:
+          - header: type (fixed, CDATA, "intestazione"); lang (opzionale, NMTOKEN)
+          - facsimile: source (obbligatorio); ref (opzionale, IDREFS)
+          - testo: id (obbligatorio, ID); type (opzionale contenuto testuale)
+-->
+
+<!ELEMENT TEI ( header, facsimile?, (#PCDATA | testo+)* ) >
+
+<!ATTLIST type header CDATA #FIXED default="intestazione" >
+<!ATTLIST lang header NMTOKEN #IMPLIED >
+
+<!ATTLIST source facsimile #REQUIRED >
+<!ATTLIST ref facsimile IDREFS #IMPLIED >
+
+<!ATTLIST id testo ID #REQUIRED >
+<!ATTLIST type testo (#IMPLIED | seg) >
