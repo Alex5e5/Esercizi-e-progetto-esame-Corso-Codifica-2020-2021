@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI>
+
+<header><![CDATA[contenuto testuale]]><header/>
+<facsimile?><![CDATA[contenuto testuale]]><facsimile/>
+<text+><![CDATA[contenuto testuale]]><text/>
+
+</TEI>
+
+<!-- TESTO DELL'ESERCIZIO:
+
+Definire i seguenti elementi:
+
+- elemento root: TEI
+- elementi figli:
+                 - header (obbligatorio una occorrenza)
+                 - facsimile (opzionale una occorrenza -?)
+                 - text (obbligatorio almeno una occorrenza -+)
+
+- Gli elementi header, facsimile e text hanno tutti un content model testuale.
+
+ -->
+ 
