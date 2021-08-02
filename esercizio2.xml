@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<docu>
+    
+    <element>
+        <ciao> "ciao" è il nodo child arbitrariamente aggiunto; "ciao" è figlio di "element" </ciao>
+    </element>
+    
+    <nowell>
+        <over> </over>
+        <over1> "over1" è il nodo sibling arbitrariamente aggiunto; "over1" è fratello di "over" e figlio di "nowell" </over1>
+    </nowell>
+        
+</docu>
+
+<!-- 
+    
+CONTENUTO DEL DOCUMENTO XML ORIGINALE/ERRATO:
+
+<?xml version="1.1" encoding="UTF-8"?>
+<docu>
+    <element>
+
+    </element>
+    <nowell>
+        <over>
+    </noWell>
+        </over>
+</docu>
+
+-->
+
+
+<!--
+
+TESTO DELL'ESERCIZIO: 
+
+Aprire il file XML, validarlo con un parser XML, correggerlo (commentando errori e modifiche), aggiungere un figlio 
+(child) ad un elemento, aggiungere un fratello (sibling) ad un elemento.
+
+
+CORREZIONI DA APPLICARE:
+
+1) Errore sintattico: <nowell> è diverso da </noWell>. Possibile correzione: mettere i contenuti di ambedue i tag come "nowell" oppure "noWell".
+
+2) Errore di annidamento: <over> è annidato tra <nowell> e </nowell>. Possibile correzione: "<nowell><over> </over></nowell>"
+   oppure "<over><nowell> </nowell></over>".
+
+3) Valore di "version": per consuetudine, il valore non è "1.1" ma "1.0".
+
+-->
