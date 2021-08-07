@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI type="doc" xmlns:tei="http://www.tei-c.org/ns/1.0" uri="vocabolarioRoot">
+
+    <teiHeader>
+
+        <fileDesc>
+            <titleStmt>
+                <title> Lettera scritta a mano da Bellini </title>
+                <respStmt>
+                    <resp> Conversione TEI a cura di </resp>
+                    <name> Alessandro Salvatori </name>
+                </respStmt>
+            </titleStmt>
+            <sourceDesc>
+                <author> Bellini </author>
+                <date> Non definita </date>
+            </sourceDesc>
+        </fileDesc>
+
+    </teiHeader>
+    
+    <text>
+        <div type="lettera">
+        <note resp="autoreCodifica"> Il metodo utilizzato è quello della "parallel transcription".
+            Per la realizzazione di questo esercizio, è stato utilizzato il programma "TEIzoner". 
+            Saranno codificate solo le prime righe delle porzioni di testo più corpose. 
+        </note>
+        <head facs="letteraBellini2.jpg" />
+        
+        <facsimile xml:id="letteraBellini2">
+            <surface xml:id="page1" start="#lettera-Bellini-2">
+            <graphic url="letteraBellini2.jpg" height="2664px" width="3200px" />
+                
+                <zone xml:id="testoBlu" ulx="76" uly="1768" lrx="825" lry="2107"> 
+                    <p> 
+                        <c><gap reason="illeggibile" unit="chars" extent="1" /></c>
+                        <c><gap reason="illeggibile" unit="chars" extent="1" /></c>
+                        <c><gap reason="illeggibile" unit="chars" extent="1" /></c>
+                    </p>
+                </zone>
+                <zone xml:id="testoLateraleDestro" ulx="2534" uly="109" lrx="3146" lry="2224"> 
+                    <p>
+                        <c> e </c>
+                        <w> pagarl <unclear> a </unclear></w>
+                        <w><unclear> mi </unclear></w>
+                        <w> feci </w>
+                        <w><del rend="overstrike"> <gap reason="illeggibile" unit="chars" /> </del></w>
+                        <w> repress <unclear> a </unclear></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w> di </w>
+                        <w> far </w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w> di </w>
+                        <w> me </w>
+                        <w><damage agent="tore off" unit="chars" /> </w>
+                    </p>
+
+                    <p>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <c> o </c>
+                        <w> non </w>
+                        <w><del rend="overstrike"> <gap reason="illeggibile" unit="chars" /> </del></w>
+                        <add place="supralinear">
+                            <abbr><w> da </w></abbr>
+                            <abbr><w><unclear> voi </unclear></w></abbr>
+                        </add>
+                        <w> avuta </w>
+                        <c> . </c>
+                    </p>
+                </zone>
+                <zone xml:id="testoCentrale" points = ' 3103,2606 2687,2209 3062,2219 2500,2213 2505,458 2507,125 895,
+                    107 870,2040 707,2038 708,2216 718,2536 1528,2545 2320,2556 2835,2552 2840,2608 '> 
+                    <p>
+                        <gb><rs type="person"><w> Eccellenza </w></rs></gb>
+                    </p>
+
+                    <p>
+                        <w> La </w>
+                        <w> bontà </w>
+                        <w> con </w>
+                        <w> la </w>
+                        <w> quale </w>
+                        <w> si </w>
+                        <w> degnò </w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                    </p>
+
+                     <p>
+                        <w> mi </w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w><unclear> voleva </unclear></w>
+                        <w><unclear> il </unclear></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w> i <c><gap reason="illeggibile" unit="chars" /></c></w>
+                        <w><name type="person"><gap reason="illeggibile" unit="chars" /></name></w>
+                    </p>
+
+                    <p>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w> il </w>
+                        <w><unclear> coraggio </unclear></w>
+                        <w> di </w>
+                        <w> pregarla </w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w> si </w>
+                        <w> voglia </w>
+                    </p>
+
+                    <p>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w> affare </w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w><gap reason="illeggibile" unit="chars" /></w>
+                        <w> ringraziarla </w>
+                        <c> . </c>
+                    </p>
+                </zone>
+
+            </surface>
+        </facsimile>
+        </div>
+    </text>
+
+</TEI>
+
+<!--
+
+TESTO DELL'ESERCIZIO: 
+
+Edizioni image-based
+
+Codificare lettera Bellini utilizzando il target facsimile e il collegamento completo testo-immagine.
+
+-->
