@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE figEx [
+
+    <!NOTATION JPEG PUBLIC 'ISO DIS 10918//NOTATION JPEG Graphics Format//EN'>
+    <!ENTITY PDatabase
+        SYSTEM 'Desktop/DOCUMENTI XML/ESERCIZI/cartolinaHawaii.jpeg' NDATA JPEG>
+]>
+<figEx>
+    <figure entity="cartolinaHawaii">
+        <head> cartolinaHawaii </head>
+        <figDesc> Questa è una cartolina presa come campione d'esempio da Internet. La potete trovare all'interno della cartella Github,
+        allegata all'esercizio8. </figDesc>
+        <p> <name type="place"> Hawaii </name>, <date> 5 luglio 2012 </date></p>
+            <milestone />
+            <p> Sono al mare. </p>
+            <p> Mi piace fare il bagno. </p>
+            <p> Nell'acqua fresca. </p>
+            <p> maestra <name type="person"> Elena </name></p>
+            <milestone />
+            <p><name type="person"> Elena </name></p>
+            <p><ptr type="website"> www.macomefa.com </ptr></p>
+    </figure>
+</figEx>
+
+<!--
+
+TESTO DELL'ESERCIZIO:
+
+Codificare una cartolina con gli opportuni elementi TEI.
+
+-->
