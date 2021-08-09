@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE TEI SYSTEM "./esercizio5.dtd">
+
+<TEI type="doc" xmlns="http://www.teic.org/ns/1.0" uri="vocabolarioRoot">
+
+<header> 
+  <msg number="1"> esempio di attributo </msg>
+</header>
+
+<text value="2"> esempio di attributo </text>
+<text></text>
+
+<header></header>
+
+</TEI>
+
+<!--
+
+TESTO DELL'ESERCIZIO:
+
+- includere all'interno di un documento XML la dichiarazione del tipo,
+  definire internamente gli elementi e gli attributi da validare.
+
+- inserire nel prologo di un documento XML la dichiarazione del tipo di 
+  documento e validare.
+
+Creare un file esterno con estensione.dtd prima di includerlo nel prologo XML.
+
+-->
