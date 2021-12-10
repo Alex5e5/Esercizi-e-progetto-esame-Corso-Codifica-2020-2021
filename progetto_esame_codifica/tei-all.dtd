@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT TEI (teiHeader, facsimile, text)>
+<!ATTLIST TEI xmlns CDATA #REQUIRED>
+<!ELEMENT teiHeader (fileDesc, encodingDesc, profileDesc, revisionDesc)>
+<!ATTLIST teiHeader xml:lang CDATA #IMPLIED>
+<!ELEMENT fileDesc (titleStmt, editionStmt, extent+, publicationStmt,
+noteStmt, sourceDesc)>
+
+<!ELEMENT titleStmt (title, author+, respStmt+)>
+<!ELEMENT title (#PCDATA | c)*>
+<!ELEMENT c (#PCDATA | null | gap)*>
+<!ELEMENT author (#PCDATA | rs | c | name | ref)*>
+<!ATTLIST author n CDATA #REQUIRED>
+<!ATTLIST author role CDATA #IMPLIED>
+<!ELEMENT rs (#PCDATA | c)*>
+<!ATTLIST rs ref CDATA #IMPLIED>
+<!ATTLIST rs role CDATA #IMPLIED>
+<!ATTLIST rs type CDATA #IMPLIED>
+<!ELEMENT name (#PCDATA | c | abbr)*>
+<!ATTLIST name n CDATA #REQUIRED>
+<!ATTLIST name ref CDATA #IMPLIED>
+<!ATTLIST name type CDATA #IMPLIED>
+<!ATTLIST name rend CDATA #IMPLIED>
+<!ELEMENT respStmt (#PCDATA | resp | name | c)*>
+<!ELEMENT resp (#PCDATA)>
+
+<!ELEMENT editionStmt (edition, respStmt)>
+<!ELEMENT edition (#PCDATA | date | c)*>
+<!ELEMENT date (#PCDATA | num | w | c)*>
+<!ATTLIST date n CDATA #REQUIRED>
+<!ATTLIST date when CDATA #IMPLIED>
+
+<!ELEMENT extent (#PCDATA)>
+<!ATTLIST extent n CDATA #REQUIRED>
+<!ATTLIST extent source CDATA #IMPLIED>
+
+<!ELEMENT publicationStmt (note | publisher | pubPlace | date | availability)*>
+
+<!ELEMENT note (#PCDATA)>
+<!ATTLIST note n CDATA #REQUIRED>
+<!ATTLIST note resp CDATA #IMPLIED>
+
+<!ELEMENT publisher (#PCDATA)>
+<!ATTLIST publisher n CDATA #REQUIRED>
+<!ELEMENT pubPlace (#PCDATA)>
+<!ATTLIST pubPlace n CDATA #REQUIRED>
+<!ATTLIST pubPlace type CDATA #IMPLIED>
+<!ATTLIST pubPlace ref CDATA #IMPLIED>
+<!ELEMENT num (#PCDATA)>
+<!ATTLIST num value CDATA #IMPLIED>
+<!ELEMENT w (#PCDATA | null | surname | gap | name | hi | rs | abbr | unclear | pc)*>
+<!ATTLIST w rend CDATA #IMPLIED>
+<!ELEMENT availability (p | null)*>
+<!ATTLIST availability n CDATA #REQUIRED>
+
+<!ELEMENT p (#PCDATA | null | note | w | c | sic | lb | num | address | gap)*>
+<!ATTLIST p n CDATA #REQUIRED>
+<!ATTLIST p xml:id CDATA #REQUIRED>
+<!ATTLIST p xml:lang CDATA #IMPLIED>
+<!ATTLIST p type CDATA #IMPLIED>
+
+<!ELEMENT noteStmt (note+)>
+<!ELEMENT sourceDesc (biblStruct, physDesc)>
+<!ELEMENT biblStruct (monogr, imprint)>
+<!ATTLIST biblStruct xml:lang CDATA #IMPLIED>
+<!ELEMENT monogr (author+, title)>
+<!ELEMENT imprint (#PCDATA | pubPlace | publisher | date | note | c)*>
+
+<!ELEMENT physDesc (objectDesc)>
+<!ELEMENT objectDesc (supportDesc)>
+<!ELEMENT supportDesc (support+)>
+<!ELEMENT support (#PCDATA | material | stamp | p)*>
+<!ATTLIST support n CDATA #REQUIRED>
+<!ELEMENT material (#PCDATA)>
+<!ELEMENT stamp (#PCDATA)>
+
+<!ELEMENT encodingDesc (projectDesc, segmentation, correction)>
+<!ELEMENT projectDesc (p)>
+<!ELEMENT segmentation (p)>
+<!ELEMENT correction (p)>
+
+<!ELEMENT profileDesc (creation+, langUsage+, calendarDesc, correspContext+)>
+<!ELEMENT creation (date | rs | note)*>
+<!ATTLIST creation n CDATA #REQUIRED>
+<!ELEMENT langUsage (#PCDATA | language | note | c)*>
+<!ATTLIST langUsage n CDATA #REQUIRED>
+<!ELEMENT language (#PCDATA | c)*>
+<!ATTLIST language ident CDATA #IMPLIED>
+<!ATTLIST language usage CDATA #IMPLIED>
+<!ELEMENT calendarDesc (#PCDATA | calendar)*>
+<!ELEMENT calendar (p, c)>
+<!ATTLIST calendar xml:id CDATA #IMPLIED>
+<!ELEMENT correspContext (#PCDATA | ref)*>
+<!ATTLIST correspContext n CDATA #REQUIRED>
+<!ELEMENT ref (#PCDATA | persName | c | date)*>
+<!ATTLIST ref target CDATA #IMPLIED>
+<!ELEMENT persName (#PCDATA | name | surname | c)*>
+<!ATTLIST persName role CDATA #IMPLIED>
+<!ELEMENT surname (#PCDATA | null | c | gap | abbr)*>
+<!ATTLIST surname n CDATA #REQUIRED>
+<!ATTLIST surname ref CDATA #IMPLIED>
+<!ATTLIST surname type CDATA #IMPLIED>
+<!ATTLIST surname rend CDATA #IMPLIED>
+
+<!ELEMENT revisionDesc (p)>
+
+<!-- Fine teiHeader, inizio facsimile -->
+
+<!ELEMENT facsimile (surface+)>
+
+<!ELEMENT surface (graphic, zone+)>
+<!ATTLIST surface n CDATA #REQUIRED>
+<!ATTLIST surface xml:id CDATA #REQUIRED>
+
+<!ELEMENT graphic EMPTY>
+<!ATTLIST graphic url CDATA #REQUIRED>
+<!ATTLIST graphic width CDATA #REQUIRED>
+<!ATTLIST graphic height CDATA #REQUIRED>
+
+<!ELEMENT zone EMPTY>
+<!ATTLIST zone ulx CDATA #REQUIRED>
+<!ATTLIST zone uly CDATA #REQUIRED>
+<!ATTLIST zone lrx CDATA #REQUIRED>
+<!ATTLIST zone lry CDATA #REQUIRED>
+<!ATTLIST zone rendition CDATA #REQUIRED>
+<!ATTLIST zone xml:id CDATA #REQUIRED>
+
+<!-- Fine facsimile, inizio text -->
+
+<!ELEMENT text (pb | head | front | body | div)*>
+<!ATTLIST text type CDATA #IMPLIED>
+
+<!ELEMENT pb EMPTY>
+<!ATTLIST pb n CDATA #REQUIRED>
+<!ATTLIST pb xml:id CDATA #REQUIRED>
+<!ATTLIST pb facs CDATA #REQUIRED>
+<!ELEMENT head (#PCDATA)>
+<!ATTLIST head facs CDATA #IMPLIED>
+<!ELEMENT front (div+)>
+<!ATTLIST front xml:lang CDATA #IMPLIED>
+<!ATTLIST front n CDATA #REQUIRED>
+<!ELEMENT div (p | milestone | listPerson | listPlace | listBibl)*>
+<!ATTLIST div xml:id CDATA #REQUIRED>
+<!ATTLIST div n CDATA #REQUIRED>
+<!ATTLIST div type CDATA #IMPLIED>
+<!ELEMENT milestone EMPTY>
+<!ATTLIST milestone unit CDATA #IMPLIED>
+<!ATTLIST milestone n CDATA #REQUIRED>
+<!ELEMENT gap EMPTY>
+<!ATTLIST gap reason CDATA #REQUIRED>
+<!ATTLIST gap unit CDATA #REQUIRED>
+<!ATTLIST gap extent CDATA #REQUIRED>
+<!ELEMENT sic (w+)>
+
+<!ELEMENT lb (w | name | num | c | persName | date | abbr | null)*>
+<!ATTLIST lb xml:id CDATA #REQUIRED>
+<!ATTLIST lb n CDATA #REQUIRED>
+<!ATTLIST lb rend CDATA #IMPLIED>
+<!ATTLIST lb break CDATA #REQUIRED>
+
+<!ELEMENT unclear (#PCDATA | rs )*>
+<!ATTLIST unclear reason CDATA #REQUIRED>
+<!ELEMENT body (div)>
+<!ATTLIST body n CDATA #REQUIRED>
+<!ELEMENT pc (#PCDATA)>
+<!ATTLIST pc force CDATA #IMPLIED>
+<!ELEMENT hi (rs)>
+<!ELEMENT address (lb+)>
+<!ELEMENT abbr (#PCDATA | w | c | rs)*>
+
+<!-- fine contenuto fronte/retro cartoline n.1 e n.2; inizio liste -->
+
+<!ELEMENT listPerson (head, person+)>
+<!ATTLIST listPerson n CDATA #REQUIRED>
+<!ELEMENT person (persName, c)>
+<!ATTLIST person xml:id CDATA #REQUIRED>
+<!ELEMENT listPlace (head, place+)>
+<!ATTLIST listPlace n CDATA #REQUIRED>
+<!ELEMENT place (placeName | c | country)*>
+<!ATTLIST place xml:id CDATA #REQUIRED>
+<!ELEMENT placeName (#PCDATA)>
+<!ATTLIST placeName type CDATA #IMPLIED>
+<!ATTLIST placeName ref CDATA #IMPLIED>
+<!ELEMENT country (#PCDATA)>
+<!ATTLIST country key CDATA #IMPLIED>
+
+<!-- fine liste; inizio bibliografia cartolina n.1 e cartolina n.2 -->
+
+<!ELEMENT listBibl (head, bibl)>
+<!ATTLIST listBibl n CDATA #REQUIRED>
+<!ATTLIST listBibl xml:id CDATA #REQUIRED>
+<!ELEMENT bibl (title | c | author | imprint)*>
+<!ATTLIST bibl type CDATA #REQUIRED>
+<!ATTLIST bibl xml:id CDATA #REQUIRED>
+
+
+<!-- GITBASH, STRINGHE UTILIZZATE:
+
+alexd@LAPTOP-5KGK8IFC MINGW64 ~/Desktop/DOCUMENTI XML
+$ java -cp "xerces-2_12_1/*" dom.Counter ./PROGETTO/cartoline.xml
+./PROGETTO/cartoline.xml: 125;31;0 ms (505 elems, 628 attrs, 6794 spaces, 12854 chars)
+
+alexd@LAPTOP-5KGK8IFC MINGW64 ~/Desktop/DOCUMENTI XML
+$ java -cp "xerces-2_12_1/*" dom.Counter -v ./PROGETTO/cartoline.xml
+./PROGETTO/cartoline.xml: 141;31;0 ms (505 elems, 628 attrs, 6794 spaces, 12854 chars)
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
